@@ -1,0 +1,20 @@
+{
+  "name": "tagsync_web",
+  "version": "1.0.0",
+  "description": "Server for tagsync, this is a producer of tags",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aman Thakral",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "primus": "^3.2.3",
+    "wiredep": "^2.2.2",
+    "ws": "^0.8.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}

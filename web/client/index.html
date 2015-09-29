@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.min.css" />
+  <!-- endbower -->
+</head>
+<body ng-app="tagSyncApp" ng-controller="tagsController">
+  <div class="container">
+    <h1>
+      Sync My Tags
+    </h1>
+    <tags-input ng-model="tags" on-tag-added="tagAdded($tag)">
+    </tags-input>
+  </div>
+
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/ng-tags-input/ng-tags-input.min.js"></script>
+  <!-- endbower -->
+
+  <script src="/primus/primus.js"></script>
+  <script src="/tagsController.js"></script>
+</body>
+</html>
