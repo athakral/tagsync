@@ -5,20 +5,18 @@ angular.module('tagSyncApp', ['ngTagsInput'])
 
                  primus.on("open", function () {
                                  console.log("Connected!")
-                                     })
+                               });
+
 
              primus.on("data", function (data) {
                              console.log("data =", data)
                            });
 
-               $scope.tags = [
-                   { text: 'just' },
-                   { text: 'some' },
-                   { text: 'cool' },
-                   { text: 'tags' }
-               ];
+
+               $scope.tags = [];
 
                $scope.tagAdded = function(addedTag) {
+                 primus.write({msgType:'tagAdded',param:addedTag});
                  console.log(addedTag);
                };
 
